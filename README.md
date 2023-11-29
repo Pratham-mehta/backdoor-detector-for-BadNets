@@ -27,7 +27,7 @@ Design a backdoor detector for BadNets trained on the YouTube Face dataset using
 └── Lab4.ipynb // (Python Notebook)
 ```
 
-## I. Dependencies
+## Dependencies
    1. Python 3.6.9
    2. Keras 2.3.1
    3. Numpy 1.16.3
