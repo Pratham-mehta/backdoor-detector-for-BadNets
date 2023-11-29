@@ -59,10 +59,6 @@ Design a backdoor detector for BadNets trained on the YouTube Face dataset using
 | 4         | 80% (48)       | 92.12          | 99.98               |
 | 10        | 86.7% (52)     | 84.33          | 77.21               |
 
-      
-      E.g., `python3 eval.py data/cl/valid.h5 data/bd/bd_valid.h5 models/bd_net.h5`. This will output:
-      Clean Classification accuracy: 98.64 %
-      Attack Success Rate: 100 %
 
 ##  Important Notes
 Please use only clean validation data (valid.h5) to design the pruning defense. And use test data (test.h5 and bd_test.h5) to evaluate the models. 
