@@ -40,11 +40,25 @@ Design a backdoor detector for BadNets trained on the YouTube Face dataset using
 2. The dataset contains images from YouTube Aligned Face Dataset. We retrieve 1283 individuals and split into validation and test datasets.
 3. bd_valid.h5 and bd_test.h5 contains validation and test images with sunglasses trigger respectively, that activates the backdoor for bd_net.h5.
 
+## Instructions for Executing Scripts
+1. Detailed instructions for executing the pruning defense can be found outlined in a sequential process within the Python notebook.
+2. The model weights for b_prime are saved in the main directory.
 
-## Evaluating the Backdoored Model
- 1. The DNN architecture used to train the face recognition model is the state-of-the-art DeepID network. 
-   2. To evaluate the backdoored model, execute `eval.py` by running:  
-      `python3 eval.py <clean validation data directory> <poisoned validation data directory> <model directory>`.
+## RESULTS
+### The Backdoor model which was Repaired
+| Threshold | Channel Pruned | Clean Accuracy | Attack Success Rate |
+|-----------|----------------|----------------|---------------------|
+| 2         | 75% (45)       | 95.90          | 100.00              |
+| 4         | 80% (48)       | 92.29          | 99.98               |
+| 10        | 86.7% (52)     | 84.54          | 77.21               |
+
+### Retrained Net
+| Threshold | Channel Pruned | Clean Accuracy | Attack Success Rate |
+|-----------|----------------|----------------|---------------------|
+| 2         | 75% (45)       | 95.74          | 100.0               |
+| 4         | 80% (48)       | 92.12          | 99.98               |
+| 10        | 86.7% (52)     | 84.33          | 77.21               |
+
       
       E.g., `python3 eval.py data/cl/valid.h5 data/bd/bd_valid.h5 models/bd_net.h5`. This will output:
       Clean Classification accuracy: 98.64 %
