@@ -41,7 +41,7 @@ Design a backdoor detector for BadNets trained on the YouTube Face dataset using
 3. bd_valid.h5 and bd_test.h5 contains validation and test images with sunglasses trigger respectively, that activates the backdoor for bd_net.h5.
 
 ## Instructions for Executing Scripts
-1. Detailed instructions for executing the pruning defense can be found outlined in a sequential process within the Python notebook.
+1. Detailed instructions for executing the pruning defense can be found outlined in a sequential process within the Python notebook (Lab4.ipynb)
 2. The model weights for b_prime are saved in the main directory.
 
 ## RESULTS
